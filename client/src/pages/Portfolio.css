@@ -1,0 +1,351 @@
+/* ===== Portfolio Page — IONYX Dark Theme ===== */
+.portfolio {
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.portfolio-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.portfolio-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.fund-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.portfolio-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.portfolio-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.portfolio-card:hover::before {
+  opacity: 1;
+}
+
+.portfolio-card h2 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Fund Details */
+.fund-details {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fund-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0.875rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: border-color var(--transition-fast);
+}
+
+.detail-item:hover {
+  border-color: var(--border-hover);
+}
+
+.detail-item .label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.detail-item .value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Chart Container */
+.chart-container {
+  height: 300px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Duration Selector */
+.duration-selector {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.duration-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+
+.duration-btn:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.duration-btn.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Text Colors */
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+/* Error */
+.error-message {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Analysis Section */
+.analysis-section {
+  margin-bottom: 2.5rem;
+}
+
+.analysis-section > h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.metric-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Holdings Table */
+.holdings-table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.holdings-table th,
+.holdings-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.holdings-table th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: sticky;
+  top: 0;
+}
+
+.holdings-table td {
+  color: var(--text-secondary);
+}
+
+.holdings-table tr {
+  transition: background var(--transition-fast);
+}
+
+.holdings-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.holdings-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Top Holdings Bar Chart */
+.top-holdings {
+  margin-top: 1rem;
+}
+
+.holding-bar {
+  margin-bottom: 1rem;
+}
+
+.holding-name {
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.holding-bar-container {
+  height: 28px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-subtle);
+}
+
+.holding-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-md);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.holding-percentage {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .portfolio-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .fund-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .duration-selector {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,7 @@
+/* Register page shares styles with Login — importing the same IONYX dark theme */
+/* All auth styles are defined in Login.css and apply via shared class names */
+
+/* Additional Register-specific overrides if needed */
+.auth-card .form-group {
+  margin-bottom: 1.1rem;
+}

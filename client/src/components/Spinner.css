@@ -1,0 +1,26 @@
+/* ===== Spinner — IONYX Dark Theme ===== */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--border-default, rgba(99, 102, 241, 0.15));
+  border-radius: 50%;
+  border-top: 3px solid var(--accent-primary, #6366f1);
+  animation: spinnerRotate 0.8s linear infinite;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
